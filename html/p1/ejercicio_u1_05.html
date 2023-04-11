@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 
+Descripcion:
+-->
+<html lang="es">
+   
+    <head>
+        <title>Plantilla</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="">
+
+        <style>
+            table, th, td {
+              border:1px solid black;
+            }
+            </style>
+
+        <style>
+
+            ol{
+                counter-reset: item;
+            }
+            li{ 
+                display: block;
+            }
+            li::before{
+                content:counters(item,".")" ";
+                counter-increment: item;
+                color: blue;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <hgroup>
+            <h1>LISTAS</h1>
+            <ol>
+                <li>Element 1 </li>
+                    <ol>
+                        <li>sub element 1</li>
+                        <li>sub element 2</li>
+                        <li>sub element 3</li>
+                    </ol>
+                <li>Element 2</li>
+                <li>Element 3</li>
+                <ol>
+                    <li>sub element 1</li>
+                    <li>sub element 2</li>
+                        <ol>
+                            <li>sub sub element 1</li>
+                            <li>sub sub element 2</li>
+                        </ol>
+                    <li>sub element 3</li>
+                </ol>
+
+            </ol>
+            
+        </hgroup>
+
+        <hgroup>
+
+            <h1>IMAGEN</h1>
+            <img src="Naranja.webp" height="100px" alt="among us">
+            <h1>IMAGENES EN TAMAÑO COMPLETO</h1>
+            <img src="MicrosoftTeams-image.png" height="100px" alt="upslp">
+            <h1>UPSLP</h1>
+            <img src="MicrosoftTeams-image (1).png" height="150px" alt="upslp2">
+            <h1>OTRO</h1>
+            <img src="Naranja.webp" width="200px" height="300px" alt="among us">
+            <br>
+            <img src="MicrosoftTeams-image.png" height="200px" width="100px" alt="upslp">
+
+        </hgroup>
+
+        <hgroup>
+
+            <h1>TABLAS</h1>
+            <table>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th>15</th>
+                    <th>18</th>
+                </tr>
+            </table>
+
+        </hgroup>
+        <br>
+        <hgroup>
+
+            <table style="width:100%">
+                <tr>
+                  <th>Company</th>
+                  <th>Logo</th>
+                  <th>Link</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Costco&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                  <td> <img src="https://www.costco.com.mx/medias/sys_master/images/hf9/h59/138615383818270.png" height="20px" alt="COSTCO"></td>
+                  <td><a href="https://www.costco.com.mx/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&#9992</a></td>
+                  <td>Maria Anders <br>ggggggg</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>H-E-B</td>
+                  <td><img src="https://www.heb.com.mx/media/logo/default/logoHeb.png" height="20px" alt="HEB"></td>
+                  <td><a href="https://www.heb.com.mx/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&#9992</a></td>
+                    <td>  
+                        <ol>
+                                 <li>Kevin Petersen</li>
+                                 <li>Jeffrey Jackson</li>
+                        </ol>
+                    </td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Universidas upslp</td>
+                    <td><img src="MicrosoftTeams-image.png" height="20px" alt="UPSLP"></td>
+                    <td><a href="https://www.upslp.edu.mx/upslp/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&#9992</a></td>
+                    <td>
+                        <ol>
+                            <dt>Luke Christensen</dt>
+                            <dt>Amy David</dt>
+                        </ol>
+                    </td>
+                    <td>San Luis Potosi</td>
+                </tr>
+                <tr>
+                    <td>Fresco</td>
+                    <td><img src="https://www.lacomer.com.mx/lacomer/assets/images/fresko/logo.png" height="20px" alt="lacomer"></td>
+                    <td><a href="https://www.lacomer.com.mx/lacomer/#!/home?succId=137&succFmt=100" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&#9992</a></td>
+                    <td>
+                        <details>
+                        <summary>Contactos</summary>
+                            <p>Robert Sampson</p>
+                            <p>Kirk Smith</p>
+                        </details>
+                    </td>
+                    <td>San Luis Potosi</td>
+                </tr>
+              </table>
+
+        </hgroup>
+
+
+    </body>
+</html>
