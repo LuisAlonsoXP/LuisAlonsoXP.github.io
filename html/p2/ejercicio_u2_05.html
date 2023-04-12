@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 30/marzo/2023
+Descripcion: Estilo CSS
+-->
+<html lang="es">
+    <head>
+        <title>ejercicio_u2_05</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="Estilo en etiquetas y encabezados (style)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+        <style>
+            p{
+                background-color: black;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+                text-indent: 50px;
+                line-height: 2;
+                
+            }
+            #parrafoespecial{
+                background-color: blue;
+                text-align: justify;
+                text-transform: uppercase;
+            }
+            #micuadro{
+                border: 5px solid black;
+            }
+            #micuadro th,#micuadro td{
+                border: 1px dotsted gray;
+            }
+            .alterno{
+                background-color: gray;
+            }
+            #micuadro th:hover,#micuadro td:hover{
+                background-color: lightgreen;
+            }
+            h1:hover,h2:hover,h3:hover{
+                color: rgb(0, 0, 0);
+                background-color: darkslategray;
+                text-transform: uppercase;
+                text-shadow: rgb(49, 168, 49) 3px 5px 5px;
+            }
+            th:hover,td:hover{
+                background-color: aqua;
+                font-size: 20px;
+            }
+            .dinamico li:first-child{
+                background-color: black;
+                color: limegreen;
+            }
+            .dinamico li:last-child{
+                background-color: crimson;
+                color: black;
+            }
+            .dinamico li:nth-child(even){
+                background-color: black;
+                color: white;
+            }
+            #mitabla tr:nth-child(even){
+                 background-color: lightpink;
+                 color: black;   
+            }
+            #mitabla tr:nth-child(odd){
+                background-color:lightgreen ;
+                color: black;
+            }
+            
+        </style>
+    </head>
+    <body style="color: goldenrod; background-image: url(1600w-c3PYha1JI9M.webp);">
+
+        <hgroup style="color: darkgreen;">
+            <h1>CSS</h1>
+            <h2>Estilo en linea</h2>
+            <ul style="list-style-image: url(Naranja.jpg);">
+                <li style="color: red;"><a href="" style="text-decoration: overline;">Inicio</a></li>
+                <li style="color: blue;"><a href="" style="text-decoration: none;">Alumnos</a></li>
+                <li style="color: yellow;"><a href="" style="text-decoration: line-through;">Aspirantes</a></li>
+                <li style="color: green;"><a href="" style="text-decoration: underline line-through;">Docentes</a></li>
+                <li style="color: magenta;"><a href="" style="text-decoration: underline;">Administracion</a></li>
+            </ul>
+            <h3>Ejemplo...</h3>
+        </hgroup>
+
+        <hgroup>
+            <h1>Estilo en encabezado</h1>
+            <p id="parrafoespecial" style="text-decoration: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in lorem sed felis aliquam dignissim non sit amet sem. Vestibulum et dapibus urna, a blandit enim. Nam sed neque ligula. Integer ultricies, massa ac sagittis luctus, sem orci volutpat metus, et sodales nisl nunc et mauris. Praesent porttitor arcu vehicula lorem malesuada, sit amet sagittis velit mattis. Aliquam id justo nunc. Sed purus est, vehicula non vulputate dictum, sodales sit amet tellus. Nam porttitor faucibus est rhoncus euismod. Vestibulum a feugiat enim. Pellentesque sed luctus arcu. Donec auctor metus dui, a pulvinar sem molestie ut. Nam rutrum mauris rutrum molestie mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id lorem eu magna pulvinar accumsan.</p>
+            <p style="text-decoration: overline;">Duis elementum faucibus velit a placerat. Vivamus pulvinar consectetur lacus, et euismod ipsum placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed at posuere leo. Ut imperdiet, neque nec ultricies vestibulum, enim dolor vehicula risus, sed tempor est libero vitae nulla. Sed nec interdum orci. Morbi nec nulla mi.</p>
+            <p style="text-decoration: line-through;">Donec sed ipsum molestie, feugiat quam sit amet, ultricies enim. Nulla nec eleifend erat, bibendum scelerisque neque. Nam lobortis, eros non accumsan tincidunt, ipsum augue feugiat augue, eu suscipit nibh ex condimentum ipsum. In egestas accumsan nisi in bibendum. Donec vulputate porta libero. Vivamus ac sagittis mi. In rutrum risus et nulla blandit dignissim. Fusce sit amet augue at mi cursus pretium. Curabitur posuere orci suscipit orci maximus, in porta est porta.</p>
+            <p style="text-decoration: underline;">Donec semper euismod urna, tincidunt egestas eros viverra at. Praesent ultricies diam elementum, molestie est eget, placerat nibh. Aliquam quis fermentum dolor. Sed a augue a mauris sagittis accumsan eget lobortis felis. Suspendisse potenti. Duis congue nec enim sed facilisis. Fusce nec diam eros. Nulla facilisi. Curabitur facilisis elementum lectus, et imperdiet tellus blandit at. Cras ut turpis tincidunt, aliquam augue quis, feugiat libero.</p>
+
+        </hgroup>
+
+        <hgroup>
+            <h2>Estilos con selectores</h2>
+            <table id="mitabla" border="2">
+                <tr>
+                    <th>&nbsp;</th><th>A</th><th>B</th><th>C</th><th>D</th> <th>E</th>
+                </tr>
+                <tr>
+                    <td>1</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>2</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>3</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>4</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>5</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </hgroup>
+
+        <hgroup>
+            <table id="micuadro" >
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="alterno">
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="alterno">
+                    <td>3</td> <td></td><td></td> <td></td> <td></td>
+                  </tr>
+                  <tr><td>4</td> <td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr class="alterno">
+                    <td>5</td><td></td><td></td><td></td><td></td>
+                  </tr>
+                </tbody>
+                </table>
+        </hgroup>
+
+        <hgroup>
+            <table border="">
+                <tr>
+                    <th></th><th>Green</th><th>Blue</th><th>Red</th><th>Blue</th><th>Red</th><th>Green</th>
+                </tr>
+                <tr>
+                    <td>0</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>32</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>64</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>96</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>128</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </hgroup>
+
+        <hgroup>
+            <h2>TABLA DE COLORES</h2>
+            <table style="color: black; font-family: 'Edu NSW ACT Foundation', cursive;">
+                <thead>
+                    <tr style="font-family: 'Anton', sans-serif;">
+                        <th colspan="4">Cuadro colores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(255, 0, 0);">0º rgb(255,0,0)</td>
+                    <td style="background-color: rgb(255,64,0);">15º rgb(255,64,0)</td>
+                    <td style="background-color: rgb(255,128,0);">30º rgb(255,128,0)</td>
+                    <td style="background-color: rgb(255,191,0);">45º rgb(255,191,0)</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td style="background-color: rgb(255,255,0);">60º rgb(255,255,0)</td>
+                    <td style="background-color: rgb(191,255,0);">75º rgb(191,255,0)</td>
+                    <td style="background-color: rgb(128,255,0);">90º rgb(128,255,0)</td>
+                    <td style="background-color: rgb(64,255,0);">105º rgb(64,255,0)</td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: rgb(0,255,0);">120º rgb(0,255,0)</td>
+                    <td style="background-color: rgb(0,255,0);"d>135º rgb(0,255,0)</td>
+                    <td style="background-color: rgb(0,255,128);">150º rgb(0,255,128)</td>
+                    <td style="background-color: rgb(0,255,191);">165º rgb(0,255,191)</td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: rgb(0,255,255);">180º rgb(0,255,255)</td>
+                    <td style="background-color: rgb(0,191,255);">195º rgb(0,191,255)</td>
+                    <td style="background-color: rgb(0,128,255);">210º rgb(0,128,255)</td>
+                    <td style="background-color: rgb(0,64,255);">225º rgb(0,64,255)</td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: rgb(0,0,255);">240º rgb(0,0,255)</td>
+                    <td style="background-color: rgb(64,0,255);">255º rgb(64,0,255)</td>
+                    <td style="background-color: rgb(128,0,255);">270º rgb(128,0,255)</td>
+                    <td style="background-color: rgb(191,0,255);">285º rgb(191,0,255)</td>
+                  </tr>
+                  <tr>
+                    <td style="background-color: rgb(255,0,255);">300º rgb(255,0,255)</td>
+                    <td style="background-color: rgb(255,0,191);">315º rgb(255,0,191)</td>
+                    <td style="background-color: rgb(255,0,128);">330º rgb(255,0,128)</td>
+                    <td style="background-color: rgb(255,0,64);">345º rgb(255,0,64)</td>
+                  </tr>
+                </tbody>
+                </table>
+        </hgroup>
+
+        <hgroup>
+            <h2>Lista con estilo dinamico</h2>
+            <ul class="dinamico">
+              <li>Primero</li>
+              <li>Segundo</li>
+              <li>Tercero</li>
+              <li>Cuarto</li>
+              <li>Quinto</li>
+              <li>Sexto</li>
+              <li>Septimo</li>
+              <li>Octavo</li>
+              <li>Noveno</li>
+              <li>Decimo</li>
+            </ul>
+          </hgroup>
+
+    </body>
+</html>

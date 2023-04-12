@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 30/marzo/2023
+Descripcion: Estilo CSS
+-->
+<html lang="es">
+    <head>
+        <title>ejercicio_u2_06</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="Estilo en archivo externo (uso con id y class)">
+        <link rel="stylesheet" href="estilo.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <hgroup class="grupo_1">
+            <h1>CSS</h1>
+            <h2>Estilo en linea</h2>
+            <ul id="listaU">
+                <li class="item_1"><a href="#" class="link_1">Inicio</a></li>
+                <li class="item_2"><a href="#" class="link_2">Alumnos</a></li>
+                <li class="item_3"><a href="#" class="link_3">Aspirantes</a></li>
+                <li class="item_4"><a href="#" class="link_4">Docentes</a></li>
+                <li class="item_5"><a href="#" class="link_5">Administracion</a></li>
+            </ul>
+        </hgroup>
+
+        <hgroup>
+            <h1>Estilo en encabezado</h1>
+            <p class="link_1" id="parrafoespecial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in lorem sed felis aliquam dignissim non sit amet sem. Vestibulum et dapibus urna, a blandit enim. Nam sed neque ligula. Integer ultricies, massa ac sagittis luctus, sem orci volutpat metus, et sodales nisl nunc et mauris. Praesent porttitor arcu vehicula lorem malesuada, sit amet sagittis velit mattis. Aliquam id justo nunc. Sed purus est, vehicula non vulputate dictum, sodales sit amet tellus. Nam porttitor faucibus est rhoncus euismod. Vestibulum a feugiat enim. Pellentesque sed luctus arcu. Donec auctor metus dui, a pulvinar sem molestie ut. Nam rutrum mauris rutrum molestie mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id lorem eu magna pulvinar accumsan.</p>
+            <p class="link_2">Duis elementum faucibus velit a placerat. Vivamus pulvinar consectetur lacus, et euismod ipsum placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed at posuere leo. Ut imperdiet, neque nec ultricies vestibulum, enim dolor vehicula risus, sed tempor est libero vitae nulla. Sed nec interdum orci. Morbi nec nulla mi.</p>
+            <p class="link_3">Donec sed ipsum molestie, feugiat quam sit amet, ultricies enim. Nulla nec eleifend erat, bibendum scelerisque neque. Nam lobortis, eros non accumsan tincidunt, ipsum augue feugiat augue, eu suscipit nibh ex condimentum ipsum. In egestas accumsan nisi in bibendum. Donec vulputate porta libero. Vivamus ac sagittis mi. In rutrum risus et nulla blandit dignissim. Fusce sit amet augue at mi cursus pretium. Curabitur posuere orci suscipit orci maximus, in porta est porta.</p>
+            <p class="link_4">Donec semper euismod urna, tincidunt egestas eros viverra at. Praesent ultricies diam elementum, molestie est eget, placerat nibh. Aliquam quis fermentum dolor. Sed a augue a mauris sagittis accumsan eget lobortis felis. Suspendisse potenti. Duis congue nec enim sed facilisis. Fusce nec diam eros. Nulla facilisi. Curabitur facilisis elementum lectus, et imperdiet tellus blandit at. Cras ut turpis tincidunt, aliquam augue quis, feugiat libero.</p>
+
+        </hgroup>
+
+        <hgroup>
+            <h2>Estilos con selectores</h2>
+            <table border="5">
+                <tr>
+                    <th>&nbsp;</th><th>A</th><th>B</th><th>C</th><th>D</th> <th>E</th>
+                </tr>
+                <tr>
+                    <td>1</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>2</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>3</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>4</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>5</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </hgroup>
+
+        <hgroup>
+            <table id="micuadro">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="alterno">
+                    <td>1</td><td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr>
+                    <td>2</td><td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr class="alterno">
+                    <td>3</td><td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr><td>4</td> <td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr class="alterno">
+                    <td>5</td><td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                </tbody>
+                </table>
+        </hgroup>
+
+        <hgroup>
+            <table border="">
+                <tr>
+                    <th></th><th>Green</th><th>Blue</th><th>Red</th><th>Blue</th><th>Red</th><th>Green</th>
+                </tr>
+                <tr>
+                    <td>0</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>32</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>64</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>96</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>128</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </hgroup>
+
+        <hgroup>
+            <h2 class="titulogeneral">TABLA DE COLORES</h2>
+            <table id="tablacolores">
+                <thead>
+                    <tr>
+                        <th class="titulo" colspan="4">Cuadro colores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="color_1">0º rgb(255,0,0)</td>
+                    <td class="color_2">15º rgb(255,64,0)</td>
+                    <td class="color_3">30º rgb(255,128,0)</td>
+                    <td class="color_4">45º rgb(255,191,0)</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td class="color_5">60º rgb(255,255,0)</td>
+                    <td class="color_6">75º rgb(191,255,0)</td>
+                    <td class="color_7">90º rgb(128,255,0)</td>
+                    <td class="color_8">105º rgb(64,255,0)</td>
+                  </tr>
+                  <tr>
+                    <td class="color_9">120º rgb(0,255,0)</td>
+                    <td class="color_10">135º rgb(0,255,0)</td>
+                    <td class="color_11">150º rgb(0,255,128)</td>
+                    <td class="color_12">165º rgb(0,255,191)</td>
+                  </tr>
+                  <tr>
+                    <td class="color_13">180º rgb(0,255,255)</td>
+                    <td class="color_14">195º rgb(0,191,255)</td>
+                    <td class="color_15">210º rgb(0,128,255)</td>
+                    <td class="color_16">225º rgb(0,64,255)</td>
+                  </tr>
+                  <tr>
+                    <td class="color_17">240º rgb(0,0,255)</td>
+                    <td class="color_18">255º rgb(64,0,255)</td>
+                    <td class="color_19">270º rgb(128,0,255)</td>
+                    <td class="color_20">285º rgb(191,0,255)</td>
+                  </tr>
+                  <tr>
+                    <td class="color_21">300º rgb(255,0,255)</td>
+                    <td class="color_22">315º rgb(255,0,191)</td>
+                    <td class="color_23">330º rgb(255,0,128)</td>
+                    <td class="color_24">345º rgb(255,0,64)</td>
+                  </tr>
+                </tbody>
+                </table>
+        </hgroup>
+
+        <hgroup>
+          <h2>Lista con estilo dinamico</h2>
+          <ul>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+          </ul>
+        </hgroup>
+
+
+    </body>
+</html>

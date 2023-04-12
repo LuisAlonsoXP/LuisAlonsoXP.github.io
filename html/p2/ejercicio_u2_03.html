@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 14/marzo/2023
+Descripcion: Etiquetas multimedia y contenido espesifico
+-->
+<html lang="es">
+    <head>
+        <title>Plantilla</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="audio, video, source, ifrmae, small, cite, address, time, ">
+    </head>
+    <body>
+        <hgroup>
+            <h1>Etiquetas multimedia</h1>
+            <audio controls>
+                <source src="Multimedia/horse.mp3" type="audio/mpeg">
+                <source src="Multimedia/horse.ogv" type="audio/ogg">
+            </audio>
+            <video controls autoplay loop height="240" width="320">
+                <source src="Multimedia/flower.webm">
+            </video>
+
+            <video width="320" height="240" controls>
+                <source src="Multimedia/movie.mp4" type="video/mp4">
+                <source src="Multimedia/movie.ogv" type="video/ogg">
+                Your browser does not support the video tag
+              </video>
+
+              <video controls width="350" height="250">
+                <source src="Multimedia/friday.mp4" type="video/mp4">
+                <track src="Multimedia/friday.vtt" kind="subtitles">
+              </video>
+        </hgroup>
+
+        <hgroup>
+            <h2>UPSLP</h2>
+            <iframe  height="600" width="800" src="https://www.upslp.edu.mx/upslp/" frameborder="0"></iframe>
+            <h2>YouTube</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_N8hFAccfD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h2>Facebook</h2>
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fupslp%2Fposts%2Fpfbid0w9T6QYnaxmVVc65deacuV4mXXK3pAHEfiLCUj1k5EChHkRPCbKLRdMqKSNiZ7iyEl&show_text=true&width=500" width="500" height="497" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <h2>Twitter</h2>
+            <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Estimada Comunidad.<br>Les compartimos la medidas de salud dentro de las instalaciones del Campus. <a href="https://t.co/avlaADSNuU">pic.twitter.com/avlaADSNuU</a></p>&mdash; Universidad Politécnica de San Luis Potosí (@UPSLP_MX) <a href="https://twitter.com/UPSLP_MX/status/1633872326533189635?ref_src=twsrc%5Etfw">March 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </hgroup>
+
+        <hgroup>
+
+            <h1>ETIQUETAS PARA CONTENIDO ESPECIFICO</h1>
+            Parrafo:<p>C. Urbano Villalón 500, La Ladrillera, 78369 San Luis, S.L.P.</p>
+            Dirrecion:<address>C. Urbano Villalón 500, La Ladrillera, 78369 San Luis, S.L.P.</address>
+            Pequeño:<br><small>C. Urbano Villalón 500, La Ladrillera, 78369 San Luis, S.L.P.</small>
+            <br>Cita: <br><cite>C. Urbano Villalón 500, La Ladrillera, 78369 San Luis, S.L.P.</cite>
+             <br> Bloque: <blockquote>C. Urbano Villalón 500, La Ladrillera, 78369 San Luis, S.L.P.</blockquote>
+
+
+            <h2>Ejemplos</h2>
+            <cite>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</cite>
+            <blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</blockquote>
+            <blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <mark>when an unknown printer took a galley of type and scrambled it to make a type specimen book.</mark></blockquote>
+
+            <h2>UPSLP</h2>
+            <ul>
+                <li>Aspirantes<a href="#1"><sup>[1]</sup></a></li>
+                <li>Alumnos<a href="#2"><sup>[2]</sup></a></li>
+                <li>Docentes<a href="#3"><sup>[3]</sup></a></li>
+                <li>Administrativos<a href="#4"><sup>[4]</sup></a></li>
+            </ul>
+
+
+            Materia:<small>Programacion Web 1</small>
+            <br> Grupo: <small>T10C</small>
+            <br> Horarios:
+            <ul>
+                <li>Lunes <time>12:00</time> a <time>12:55</time></li> 
+                <li>Martes <time>12:00</time> a <time>12:55</time></li>  
+                <li>Miercoles <time>12:00</time> a <time>12:55</time></li>  
+                <li>Jueves <time>12:00</time> a <time>12:55</time></li>   
+                <li>Viernes <time>12:00</time> a <time>12:55</time></li>  
+            </ul>
+
+            
+
+            <h3>Referencias</h3>
+            <ol>
+                <li id="1">Aspirantes: <a href="https://www.upslp.edu.mx/upslp/?page_id=244">https://www.upslp.edu.mx/upslp/?page_id=244</a></li>
+                <li id="2">Alumnos: <a href="https://www.upslp.edu.mx/upslp/?page_id=209">https://www.upslp.edu.mx/upslp/?page_id=209</a></li>
+                <li id="3">Docentes: <a href="https://www.upslp.edu.mx/upslp/?page_id=231">https://www.upslp.edu.mx/upslp/?page_id=231</a> </li>
+                <li id="4">Administrativos: <a href="https://www.upslp.edu.mx/upslp/?page_id=236">https://www.upslp.edu.mx/upslp/?page_id=236</a> </li>
+            </ol>
+
+            <h4>Super indice</h4>
+            Universidad Politecnica de San Luis Potosi <sup>UPSLP, 2023</sup>
+            <br> Universidad Politecnica de San Luis Potosi <sup>UPSLP, 2023</sup>
+
+            <h4>Subindice</h4>
+            Universidad Politecnica de San Luis Potosi <SUB>UPSLP, 2023</SUB>
+
+            <H2>Otros ejemplos</H2>
+            Relatividad: <var>E=mc<sup>2</sup></var>
+            <br>Agua: H<sub>2</sub>O
+            <br>Glucosa: C<sub>6</sub>H<sub>O</sub><sub>6</sub>
+            <br>Sodio: (Na): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>1</sup>
+            <br>Ecuacion: 3x<sup>2</sup>+ 4y<sup>2</sup> = 2xy
+            <br>&nbsp;- Valores: <var>X</var> = 5, <var>Y</var> = 4,
+
+            <h4>Comandos</h4>
+            Copiar: <kbd>Ctrl + c</kbd> 
+            <br>Pegar: <kbd>Ctrl + v</kbd>
+            <br>Cortar: <kbd>Ctrl + x</kbd>
+            <br>Deshacer: <kbd>Ctrl + z</kbd>
+            <br>Rehacer: <kbd>Ctrl + y</kbd>
+
+            <h4>Codigo</h4>
+            Hola mundo en C
+            <br><code>
+                #include &lt;stdio.h&gt;
+                    int main(){
+                        printf("Hola Mundo desde HTML");
+                        return 0;
+                    }
+            </code>
+            <br>
+            Hola mundo en C++
+            <br><code>
+                #include &lt;iostream&gt;
+                using namespace std;
+                    int main(){
+                        cout&lt;&lt;"Hola Mundo en C++ desde HTML!!!!"&gt;&gt;;
+                        return 0;
+                    }
+            </code>
+
+            <br>Ejemplo basico de lex
+            <pre>
+                #include &lt;stdio.h&gt;
+                    int main(){
+                        printf("Hola Mundo desde HTML");
+                        return 0;
+                    }
+            </pre>
+        </hgroup>
+    </body>
+</html>
