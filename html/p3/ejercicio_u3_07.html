@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 9/05/23
+Descripcion:Tares Modulo 4
+-->
+<html lang="es">
+    <head>
+        <title>ejercicio_u3_06</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="for do,while">
+        <style>
+            .tit{background-color: black; color: aqua;}
+        </style>
+    </head>
+    <body>
+        
+        <!---4.2.1.15 Bucles - Tareas-->
+        <h1 class="tit">JavaScript</h1>
+
+        <script>
+            /* Tarea no. 1 */
+            
+            var varNum;
+            /* For */
+            for(varNum = 100;varNum>=0;varNum -=10){
+                console.log("For >> valor:" + varNum);
+            }
+
+            /* Do While */
+            varNum = 100;
+            do{
+                console.log("Do While >> valor: " + varNum);
+                varNum -=10;
+            }while(varNum>=0);
+
+            /* While */
+
+            varNum = 100;
+
+            while(varNum>=0){
+                console.log("While >> valor: " + varNum);
+                varNum -=10;
+            }
+
+             /* While */
+             /*
+             varNum = 100;
+
+             for(;;){
+                console.log("ForInfinito >> valor:" + varNum);
+                if(varNum > 0){
+                    varNum -=0;
+                }else{
+                    break;
+                }
+            } */
+
+            /* Tarea No. 2*/
+
+            let upperLimit = Number(prompt("Ingresa limite superior"));
+            let lowerLimit = Number(prompt("Ingresa limite inferior"));
+
+            if (!Number.isNaN(upperLimit) && !Number.isNaN(lowerLimit) && upperLimit > lowerLimit) {
+                for (i = upperLimit; i >= lowerLimit; i -= 10) {
+                    console.log(i);
+                }
+            }
+
+            /*
+            let varNum1 = Number(prompt("Valor Final de la secuencia: "));
+            let varNum2 = Number(prompt("Valor Inicial de la secuencia: "));
+            let varDelta = Number(prompt("Valor del cambio de (Incremento/Decremento): "));
+
+            let banDec = false; let barInc = false;
+
+            if(varNum1 > varNum2){
+                banInc = false;
+            }else{
+                banInc = true;
+            }
+
+            if(Number.isNaN(varNum1) || Number.isNaN(varNum2)){
+                alert("Los valores deben ser numericos");
+            }else{
+                for(varNum = varNum1; ;){
+                    console.log("ForDinamico >> valor: " + varNum);
+                    if(banDec){
+                    }if(varNum >= varNum2){
+                        varNum -= varDelta;
+                    }else{
+                        varNum += varDelta;
+                        if(varNum<=varNum2){
+                            continue; 
+                        }else{
+                            break;
+                        }
+                    }
+                }
+            }
+            */
+
+            /* Tarea Numero 6 */
+            
+            let varNum_1,varNum_2,varOp,varRes,varOpcion;
+            let varHistorial = "Historial de operaciones realizadas";
+
+            do{
+            varNum_1 = prompt("Valor del primer numero");
+            varNum_2 = prompt("Valor del primer numero");
+            varOp = prompt("Operacio a realizar (+,-,*,/)");
+
+            varNum_1 = Number.parseInt(varNum_1,10);
+            varNum_2 = Number.parseInt(varNum_2,10);
+
+            varRes ="";
+
+            if(Number.isNaN(varNum_1) || Number.isNaN(varNum_2)){
+                varRes = "Los operadores deben ser numeros..."
+            }else{
+                switch(varOp){
+                    case '+': varRes = "El resultado es de ("+ varNum_1 + " + " + varNum_2 + ") es igual a: "+ (varNum_1 + varNum_2); break;
+                    case '-': varRes = "El resultado es de ("+ varNum_1 + " - " + varNum_2 + ") es igual a: "+ (varNum_1 - varNum_2); break;
+                    case '*': varRes = "El resultado es de ("+ varNum_1 + " * " + varNum_2 + ") es igual a: "+ (varNum_1 * varNum_2); break;
+                    case '/': varRes = "El resultado es de ("+ varNum_1 + " / " + varNum_2 + ") es igual a: "+ (varNum_1 / varNum_2); break;
+                    default: varRes = "Operador Incorrecto...";
+                }
+            }
+
+            alert(varRes);
+
+            varOpcion = confirm("Deseas realizar otra operacion? ");
+        }while(varOpcion);
+
+        alert(varHistorial);
+
+
+        </script>
+
+        
+        
+    </body>
+</html>

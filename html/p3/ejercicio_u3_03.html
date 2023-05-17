@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 4/5/23
+Descripcion:
+-->
+<html lang="es">
+    <head>
+        <title>Plantilla</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content=" typeof, boolean, Number, strig">
+    </head>
+    <body>
+        <h1>JavaScript - Tipo de Datos</h1>
+        <script>
+            <!---Tipos de Datos Primitivos - Tareas-->
+            let varBoolean = true;
+            let varNumber = Number(3.14);
+            let BingInt = BigInt("4");
+            let varString = String(Infinity);
+            let varUndefine;
+
+            alert("varBolean es de tipo: " + typeof varBoolean + "y su valor es: " + varBoolean +
+                    "\nvarNumber es de tipo: " + typeof varNumber + "y su valor es: " + varNumber +
+                    "\nBigInt es de tipo: " + typeof BingInt + "y su valor es: " + BigInt +
+                    "\nvarString es de tipo: " + typeof varString + "y su valor es: " + varString +
+                    "\nvarUndefine es de tipo: " + typeof varUndefine + "y su valor es: " + varUndefine );
+
+
+                    let tempString = "1234";
+                    let tempNumber = Number(tempString);
+                    let tempBigInt = BigInt(tempNumber);
+                    let tempBool = Boolean(tempBigInt);
+
+                    alert("varBolean es de tipo: " + typeof varBoolean + "y su valor es: " + varBoolean +
+                    "\nvarNumber es de tipo: " + typeof varNumber + "y su valor es: " + varNumber );
+
+
+                    const str1 = 42 + "1";
+                    let str2 = 42 +1;
+                    let str3 = 42 + Number("1");
+                    let str4 = 42 + +"1";
+
+                    console.log(typeof str1,str1);
+                    console.log(typeof str2,str2);
+                    console.log(typeof str3,str3);
+                    console.log(typeof str4,str4);
+
+
+        </script>
+        
+        <script>
+           
+        </script>
+
+    </body>
+</html>

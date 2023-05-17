@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 9/05/23
+Descripcion: Funciones y Eventos
+-->
+<html lang="es">
+    <head>
+        <title>ejercicio_u3_06</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="for do,while">
+        <style>
+            .tit{background-color: black; color: aqua;}
+        </style>
+    </head>
+    <body onload="if(!confirm('Para poder acceder debes aceptar las cookies del sitio...')) window.location = 'https://www.google.com/';"
+    onunload="alert('Hasta la vista...');">
+        
+        <!---4.2.1.15 Bucles - Tareas-->
+        <h1 class="tit">JavaScript - Funciones & Eventos</h1>
+        <h2>contenido en una etiqueta</h2>
+        <button onclick="document.body.style.backgroundColor = 'lightblue';" ondblclick="document.body.style.backgroundColor = 'lightgreen'">cambia de color...</button>
+        <h2>JavaScript contenido en una funcion</h2>
+        <button id="btncolor">Cambiar de color</button>
+        <button id="btnsaludar">Saludar</button>
+        <script>
+            let button = document.getElementById("btncolor");
+            function funColor_A(){
+                document.body.style.backgroundColor = 'red'
+            }
+            function funColor_B(){
+                document.body.style.backgroundColor = 'pink'
+            }
+            button.addEventListener('click',funColor_A);
+            button.addEventListener('dblclick',funColor_B);
+            /*Modo Avanzado*/
+            document.getElementById("btnsaludar").addEventListener('click',() => {
+                alert("Hola a todos!!!");
+            });
+        </script>
+
+        <h2>Eventos del mouse</h2>
+
+        <p style="background-color:  aquamarine;" onmouseover="alert('Acabas de entrar al parrafo..');"
+        onmouseout="alert('Acabas de salir al parrafo..');" onclick="console.log('Presionaste el parrafo...');">
+            Puedes pasar por encima del parafo, salir del parrafo... <br>
+            O hacer click sobre el parrafo...
+        </p>
+        
+        <h2>Formulario con JavaScript</h2>
+        <label for="">Nombre: </label>
+        <input type="text" placeholder="(Nombre)" id="varNombre"> 
+        <input type="button" value="Accion" id="" onclick="let varMensaje = 'Hola como estas???'
+        document.getElementById('varResultado').value=varMensaje;">
+        <br>
+        <label for="">Resultados: </label>
+        <input type="text" placeholder="(Resulultado)" id="varResultado" readonly>
+
+        <h2>Tabla de Superficie y Volumen</h2>
+
+        <table border="5">
+            <tr>
+                <th>Figura</th>
+                <th>Datos</th>
+                <th>Resultados</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Rectangulo</td>
+                <td>Base: <input type="number" id="varBase"></td>
+                <td rowspan="2">Area
+                    <input type="number" id="varArea" readonly>
+                    <input type="button" value="Calcular" onclick="document.getElementById('varArea').value=document.getElementById('varBase').value* document.getElementById('varAltura').value;">
+                </td>
+            </tr>
+            <tr>
+                <td>Altura: <input type="number" id="varAltura"></td>
+            </tr>
+            <tr>
+                <td>Prisma</td>
+                <td>Profundidad: <input type="number" id="varProfundidad"></td>
+                <td>Volumen:
+                    <input type="number" id="varVolumen" readonly>
+                    <input type="button" value="Calcular" onclick="document.getElementById('varArea').value=document.getElementById('varBase').value* document.getElementById('varAltura').value;document.getElementById('varVolumen').value=document.getElementById('varAltura').value * document.getElementById('varProfundidad').value*document.getElementById('varBase').value;">
+                </td>
+            </tr>
+            <tr>
+                <td>Cuadro</td>
+                <td rowspan="2">Arista: <input type="number" id="varArista"></td>
+                <td>Area <input type="number" id="varAreaPrisma" readonly></td>
+            </tr>
+            <tr>
+                <td>Cubo</td>
+                <td>Voluemn: <input type="number" id="varVolumenPrisma" readonly></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

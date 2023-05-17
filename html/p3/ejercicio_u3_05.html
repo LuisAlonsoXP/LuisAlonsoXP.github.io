@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 5/mayo/2023
+Descripcion: Tarea Modulo 3
+-->
+<html lang="es">
+    <head>
+        <title>Plantilla</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="Alert,Crome">
+        <style>
+            .tit{background-color: black; color: aqua;}
+        </style>
+    </head>
+    <body>
+
+        <h1 class="tit">JavaScript</h1>
+        <script>
+            /*----3.3.1.7 Interacción con el usuario - Tareas */
+
+            let varAnchura = prompt("Introduce el valor de la anchura de la caja","20");
+            let varAltura = prompt("Introduce el valor de la altura de la caja","10");
+            let varLongitud = prompt("Introduce el valor de la longitud de la caja","50");
+
+            let bandAncho, bandAlto, bandLargo;
+            let strError = "Los siguientes valores no son correctos...";
+
+            bandAncho = verAnchura? true:false;
+            bandAlto = varAltura? true:false;
+            bandLargo = varLongitud? true:false;
+
+            if(!bandAncho)
+            strError += "\n - Anchura";
+            if(!bandAlto)
+            strError += "\n - Altura";
+            if(!bandLargo)
+            strError += "\n - Largo";
+
+            if(bandAncho && bandAlto && bandLargo)
+            alert("El volumen de la caja es de : " + (varAnchura * varAltura * varLongitud) + " Unidades Cubicas");
+            else
+            alert(strError);
+        </script>
+    </body>
+</html>

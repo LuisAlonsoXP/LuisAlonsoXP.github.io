@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!----
+Nombre: Luis Angel Alonso Costilla
+Materia: Programacion Web 1
+Fecha: 9/05/23
+Descripcion:Tares Modulo 4
+-->
+<html lang="es">
+    <head>
+        <title>ejercicio_u3_06</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="Luis Angel Alonso Costilla">
+        <meta name="revised" content="">
+        <meta name="description" content="switch,prompt,id,else">
+        <style>
+            .tit{background-color: black; color: aqua;}
+        </style>
+    </head>
+    <body>
+        <!---4.1.1.11 Tareas: Condicionales-->
+
+        <h1 class="tit">JavaScript</h1>
+
+        <script>
+
+            /* Tarea Numero 1 */
+
+        let varNum = prompt("Introduce el valor para jugar");
+        varNum = varNum? varNum : "0";
+
+        if(varNum > 90 && varNum < 110){
+        alert("!BINGO");
+        }else{
+        alert("!FALLASTE");
+        } 
+
+        /* Tarea Numero 2 */
+
+        let varResult = (varNum > 90 && 100 )? true: false;
+
+        if(varResult){
+            alert("!Loteria");
+        }else{
+            alert("!Perdiste :(");
+        }
+
+        /*
+
+        let varResult = (varNum > 90 && 100 )? "!LOTERIA!": "!PERDISTE! :(";
+
+        if(varResult){
+            alert();
+        }else{
+            alert();
+        
+            */
+
+
+            /*
+            let firstNumber = Number(prompt("Introduce el primer número: "));
+            let secondNumber = Number(prompt("Introduce el segundo número: "));
+            let operand = prompt("Introduce el operando (+, -, * o /)");
+            let result;
+
+            if (!Number.isNaN(firstNumber) && !Number.isNaN(secondNumber)) {
+                switch (operand) {
+                    case "+": result = firstNumber + secondNumber; break;
+                    case "-": result = firstNumber - secondNumber; break;
+                    case "*": result = firstNumber * secondNumber; break;
+                    case "/": result = firstNumber / secondNumber; break;
+                    default: result = "Error: operando desconocido";
+                }
+            } else {
+                result = "Error: al menos uno de los valores ingresados no es un número";
+            }
+            alert(result);
+*/
+
+
+            let varNum1 = prompt("Valor del primer numero");
+            let varNum2 = prompt("Valor del primer numero");
+            let varOp = prompt("Operacio a realizar (+,-,*,/)");
+
+            varNum1 = Number.parseInt(varNum1,10);
+            varNum2 = Number.parseInt(varNum2,10);
+
+            let varRes ="";
+
+            if(Number.isNaN(varNum1) || Number.isNaN(varNum2)){
+                varRes = "Los operadores deben ser numeros..."
+            }else{
+                switch(varOp){
+                    case '+': varRes = "El resultado es de ("+ varNum1 + " + " + varNum2 + ") es igual a: "+ (varNum1 + varNum2); break;
+                    case '-': varRes = "El resultado es de ("+ varNum1 + " - " + varNum2 + ") es igual a: "+ (varNum1 - varNum2); break;
+                    case '*': varRes = "El resultado es de ("+ varNum1 + " * " + varNum2 + ") es igual a: "+ (varNum1 * varNum2); break;
+                    case '/': varRes = "El resultado es de ("+ varNum1 + " / " + varNum2 + ") es igual a: "+ (varNum1 / varNum2); break;
+                    default: varRes = "Operador Incorrecto...";
+                }
+            }
+
+            alert(varRes);
+
+        </script>
+    </body>
+</html>
