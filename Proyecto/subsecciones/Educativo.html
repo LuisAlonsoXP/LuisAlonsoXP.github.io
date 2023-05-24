@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Proyecto - web 1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        .main_baner{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 1px);
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(../img/pexels-nemuel-sereti-6424586.jpg);
+    animation: banner 28s infinite linear;
+    
+}
+.banner_cont{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner_cont h1{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 60px;
+    text-align: center;
+}
+.banner_cont a{
+    text-decoration: none;
+    color: white;
+    padding: 9px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.banner_cont a:hover{
+    background-color: white;
+    color: black;
+}
+@keyframes banner{
+    0%{background-image: url(../img/edu1.jpeg);}
+    25%{background-image: url(../img/edu2.png);}
+    26%{background-image: url(../img/edu1.jpeg);}
+    50%{background-image: url(../img/edu2.png);}
+    51%{background-image: url(../img/edu1.jpeg);}
+    75%{background-image: url(../img/edu2.png);}
+    76%{background-image: url(../img/edu1.jpeg);}
+    100%{background-image: url(../img/edu2.png);}
+}
+.pa{font-size: 25px; font-family: 'Quicksand', sans-serif; text-align: justify; margin-right: 30px; margin-left: 30px;margin-bottom: 30px;}
+.t1{color:rgb(17, 0, 114);  font-family: 'Oswald', sans-serif; font-size: 40px; text-align: center;}    
+.cols{column-count: 3;}  
+.el{font-family: 'Quicksand', sans-serif; text-align: justify; margin-right: 30px; margin-left: 30px;margin-bottom: 20px; list-style-type: square;font-size: 25px;} 
+    </style>
+</head>
+<body class="borde" >
+    <header>
+        <div>
+            <nav>
+                <h1><a class="tit_baner" href="../index.html">LENGUAJES DE PROGRAMACION</a></h1>
+                <ul>
+                    <li><a href="#informacion">SECCIONES</a>
+                        <ul>
+                            <li><a href="Informacion.html">Informacion</a></li>
+                            <li><a href="Actualidad.html">Actualidad</a></li>
+                            <li><a href="Tecnologia.html">Tecnologia</a></li>
+                            <li><a href="Estadisticas.html">Estadisticas</a></li>
+                            <li><a href="Educativo.html">Educativo</a></li>
+                            <li><a href="Futuro.html">Futuro</a></li>
+                            <li><a href="Laboral.html">Laboral</a></li>
+                            <li><a href="Referencias.html">Referencias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="../faqs.html">FAQ'S y COM'S</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="main_baner">       
+        <div class="banner_cont">
+            <h1>Ámbito Educativo</h1>
+            <a href="../index.html">INICIO</a>
+        </div>
+    </section>
+    
+        <section class="seccion2">
+            <article>
+                <div>
+                    <h1 class="t1">General</h1>
+                </div>
+                <div>
+                    <img  class="imagenseccion1" src="img/pexels-nemuel-sereti-6424586.jpg" alt="">
+                </div>
+                <p class="pa">En cuanto a los estudios de especialización y posgrado en el ámbito de los lenguajes de programación, existen diversas opciones disponibles. Algunas de ellas son:</p>
+                
+
+                <p class="pa"><b>Maestría en Ingeniería de Software:</b> Este programa de posgrado tiene como objetivo formar profesionales con habilidades avanzadas en el diseño, desarrollo y mantenimiento de software, así como en la gestión de proyectos de software. En este programa se aborda el estudio de diversos lenguajes de programación, incluyendo Java, C++, Python, entre otros.</p>
+                  
+                <p class="pa"><b>Maestría en Ciencia de Datos:</b> La ciencia de datos es un campo interdisciplinario que se enfoca en el análisis de grandes volúmenes de datos para extraer conocimiento y tomar decisiones informadas. En este programa se abordan diversos lenguajes de programación utilizados en la ciencia de datos, como Python, R, SQL, entre otros.</p>
+                          
+                <p class="pa"><b>Especialización en Desarrollo de Aplicaciones Web:</b> Esta especialización está dirigida a profesionales que deseen especializarse en el desarrollo de aplicaciones web. En este programa se aborda el estudio de lenguajes de programación como HTML, CSS, JavaScript, PHP, entre otros.</p> 
+                          
+                <p class="pa"><b>Especialización en Inteligencia Artificial y Machine Learning:</b> Esta especialización está dirigida a profesionales que deseen especializarse en el campo de la inteligencia artificial y el aprendizaje automático. En este programa se abordan diversos lenguajes de programación utilizados en estos campos, como Python, R, Java, entre otros.</p> 
+                          
+                <p class="pa"><b>Diplomado en Programación Avanzada:</b> Este diplomado está dirigido a profesionales que deseen profundizar sus conocimientos en programación. En este programa se aborda el estudio de lenguajes de programación como Java, C++, Python, entre otros.</p> 
+                       
+                <p class="pa">Cabe destacar que estas son solo algunas de las opciones disponibles, ya que existen muchos otros programas de posgrado y especialización enfocados en diferentes áreas de los lenguajes de programación. Además, cada país y región pueden tener sus propias opciones educativas y de formación en este ámbito.</p>
+                
+                <h1 class="t1">En México</h1>
+
+                <div class="cols">
+                    <p class="pa">En cuanto a los estudios de especialización y/o posgrado sobre lenguajes de Programación en México, se encuentra Máster en diseño y programación web, el cual lo ofrece la Universidad Americana de Europa (UNADE). En este máster de programación web tratan los temas medulares de la tecnología más competitiva en proyecto web. Es decir, los dominios tales como HTML 5 y JavaScript. Teniendo en cuenta, sobre todo, la perspectiva del cliente y sus hábitos de navegación.</p>
+        
+                    <p class="pa">Además, se abordará, el gestor de bases de datos (BD) y toda la información más relevante sobre PHP. Al mismo tiempo, los alumnos de este máster de programación web adquirirán las capacidades necesarias para desarrollar aplicaciones. Y no solo para desarrollarlas, sino gestionar y crear aspectos dinámicos y profesionales.</p>
+                    
+                    <p class="pa">Pues el ámbito tecnológico está en creciente innovación y cambio, cada vez este sector demanda personal más capacitado. De la misma manera que demandan trabajadores especializados en determinadas áreas. Una de las más exigentes es la programación web. Estos expertos estarán ante un mercado amplio de oportunidades laborales.</p>
+                    </div>
+                    
+                    <p class="pa">Otro de los estudios especializado en lenguajes de programación es Maestría en Dirección e Ingeniería en Sitios Web en UNIR México. Con la Maestría en Desarrollo de Aplicaciones Web te especializarás en uno de los perfiles más demandados del mercado. Según el último estudio de LinkedIn de empleos emergentes (2021), en México, tanto la programación y la adaptación de programas de software como la implementación de la nube son áreas de crecimiento. La necesidad de actualización y digitalización de muchas empresas harán crecer la contratación para implementar este tipo de programas de gestión.</p>
+                    
+                    <p class="pa">Aprenderás a:</p>
+                    <ul class="el">
+                            <li class="el">Analizar las ventajas y diferencias entre cada lenguaje de programación (HTML, HTML5, XHTML, XML, RDF, etc.)</li>
+                            <li class="el">Dirigir, implantar y mantener sitios web complejos.</li>
+                            <li class="el">Dominar gestores de contenidos CMS.</li>
+                            <li class="el">Diferenciar y utilizar los lenguajes de programación de cliente y servidor para desarrollo web.</li>
+                            <li class="el">Utilizar las principales herramientas de virtualización y los principales servicios de computación en la nube en desarrollos web y aplicaciones móviles.</li>
+                            <li class="el">Comprender los principios y métodos utilizados para la difusión de contenidos multimedia a través de la web y su integración con aplicaciones web</li>
+        
+                    </ul>
+                    <p class="pa">La complejidad del sector es tal, que resulta necesaria la formación de buenos profesionales, con una visión integral y profunda, capaces de explotar sistemas informáticos con visión estratégica y de llevar a cabo su dirección, construcción y mantenimiento de manera eficaz y minuciosa.</p>
+        
+                    <p class="pa">Asi mismo, la Universidad de Guadalajara (UDG) te ofrece completar una Maestria en Ingenieria de Software. Con el objetivo de contribuir en la innovación y desarrollo de tecnología en la industria nacional y local, a través de la formación de profesionales expertos en desarrollo de software, con calidad y metodologías formales, utilizando tecnología de vanguardia. La Maestría en Ingeniería de Software se constituye en un programa de formación de alto nivel para contribuir a la solución de problemas propios del ámbito del desarrollo de software. </p>
+        
+                    <p class="pa">La construcción de los productos de software de alta calidad para enfrentar los imparables cambios a los que se enfrenta las organizaciones a nivel mundial y responder de forma integral a las necesidades de la industria del software, que se encuentra en constante evolución.</p>
+            </article>
+           
+                
+                <div class="aliniado_derecha">
+                    <div>
+                        <img class="imagenseccion1" src="img/computer.jpg" alt="">
+                    </div>
+                   
+                </div>
+                
+            
+ 
+            <hr>
+        </section>
+
+        <section>
+            
+        </section>
+
+
+        <footer id="contacto">
+            <h2 style="font-size: 40px;">Contacto</h2>
+            <p style="font-size: 25px;">Luis Angel Alonso Costilla - 182298:</p>
+            <p style="font-size: 25px;">Ana Paola Guerrero Ruiz - 181510</p>
+            <address style="font-size: 25px;">
+                Univerdidad Politecnica de San Luis Potosi<br>
+                San Luis Potosi<br>
+                Teléfono: (123) 456-7890<br>
+                Email: <a href="mailto:contacto@ejemplo.com" class="email_footer">Prueba@hotmail.com</a>
+            </address>
+        </footer>
+    
+    
+</body>
+</html>
