@@ -43,39 +43,394 @@ body::before {
   opacity: 0.4;
 }
 
-.blob {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.10;
-}
+.blob { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; opacity: 0.10; }
 .blob-1 { width: 500px; height: 500px; background: #ef4444; top: -100px; right: -100px; }
 .blob-2 { width: 400px; height: 400px; background: var(--accent2); bottom: -100px; left: -100px; }
 
 /* ── NAV ── */
 nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
   padding: 18px 40px;
   background: rgba(12,14,20,0.75);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 .nav-back {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--muted);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
   transition: color 0.2s;
+}
+.nav-back:hover { color: var(--accent); }
+.nav-logo { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+
+/* ── LAYOUT ── */
+main { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+/* ── HERO ── */
+.project-hero { padding-top: 140px; padding-bottom: 60px; }
+.project-tag {
+  font-family: var(--mono); font-size: 11px; color: var(--accent);
+  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: block;
+  opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
+}
+.project-title {
+  font-family: var(--serif); font-size: clamp(40px, 7vw, 72px); line-height: 1.05;
+  margin-bottom: 20px; opacity: 0; animation: fadeUp 0.7s ease forwards 0.25s;
+}
+.project-title em { font-style: italic; color: #f87171; }
+.project-subtitle {
+  font-size: 16px; color: var(--muted); max-width: 580px; margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 0.7s ease forwards 0.4s;
+}
+.meta-row {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px;
+  opacity: 0; animation: fadeUp 0.7s ease forwards 0.55s;
+}
+.meta-badge {
+  font-family: var(--mono); font-size: 11px; padding: 5px 14px;
+  border-radius: 20px; border: 1px solid var(--border); color: var(--muted); background: var(--surface);
+}
+.meta-badge.highlight {
+  border-color: rgba(110,231,183,0.3); color: var(--accent); background: rgba(110,231,183,0.07);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VIDEO ── */
+.video-section { margin-bottom: 72px; }
+.video-label { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+.video-wrapper {
+  position: relative; width: 100%; aspect-ratio: 16/9;
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--surface);
+}
+.video-wrapper iframe { width: 100%; height: 100%; border: none; }
+.video-placeholder {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  color: var(--muted); font-family: var(--mono); font-size: 13px; cursor: pointer; background: var(--surface2);
+}
+.play-btn {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 1.5px solid rgba(110,231,183,0.4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 24px; transition: all 0.2s;
+}
+.video-placeholder:hover .play-btn { background: rgba(110,231,183,0.1); border-color: var(--accent); transform: scale(1.05); }
+
+/* ── SCREENSHOTS ── */
+.screenshots-section { margin-bottom: 72px; }
+.section-label { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+.screenshots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.screenshot {
+  border-radius: 10px; overflow: hidden; border: 1px solid var(--border);
+  aspect-ratio: 16/9; background: var(--surface2); position: relative; cursor: pointer;
+}
+.screenshot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.screenshot:hover img { transform: scale(1.05); }
+.screenshot::after {
+  content: '🔍';
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  background: rgba(0,0,0,0.4);
+  opacity: 0; transition: opacity 0.2s;
+}
+.screenshot:hover::after { opacity: 1; }
+
+/* ── LIGHTBOX ── */
+#lightbox {
+  position: fixed; inset: 0; z-index: 999;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(8, 10, 16, 0.92);
+  backdrop-filter: blur(20px);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#lightbox.active { opacity: 1; pointer-events: all; }
+#lightbox img {
+  max-width: 90vw; max-height: 85vh;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+#lightbox.active img { transform: scale(1); }
+#lightbox-close {
+  position: absolute; top: 24px; right: 28px;
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
+  cursor: pointer; background: var(--surface); border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: 6px; transition: all 0.2s;
+}
+#lightbox-close:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+#lightbox-prev, #lightbox-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  font-family: var(--mono); font-size: 20px; color: var(--muted);
+  cursor: pointer; background: var(--surface); border: 1px solid var(--border);
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; user-select: none;
+}
+#lightbox-prev { left: 24px; }
+#lightbox-next { right: 24px; }
+#lightbox-prev:hover, #lightbox-next:hover { color: var(--accent); border-color: rgba(110,231,183,0.4); }
+#lightbox-counter {
+  position: absolute; bottom: 24px;
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+}
+
+/* ── DESCRIPCIÓN ── */
+.description-section { margin-bottom: 72px; }
+.desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.desc-block h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 14px; }
+.desc-block p, .desc-block li { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.desc-block ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.desc-block ul li::before { content: '→ '; color: var(--accent); font-family: var(--mono); }
+
+/* ── STACK ── */
+.stack-section { margin-bottom: 80px; }
+.stack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.stack-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; transition: border-color 0.2s; }
+.stack-card:hover { border-color: rgba(110,231,183,0.3); }
+.stack-tech { font-family: var(--mono); font-size: 13px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+.stack-desc { font-size: 12px; color: var(--muted); }
+
+/* ── CTA ── */
+.cta-section { text-align: center; padding: 60px 0 100px; border-top: 1px solid var(--border); }
+.cta-section h2 { font-family: var(--serif); font-size: 36px; margin-bottom: 12px; }
+.cta-section p { color: var(--muted); font-size: 15px; margin-bottom: 32px; }
+.cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border-radius: 6px; font-family: var(--mono); font-size: 13px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+.btn-primary { background: var(--accent); color: #0c0e14; border: none; }
+.btn-primary:hover { background: #a7f3d0; transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
+
+footer { position: relative; z-index: 1; text-align: center; padding: 32px 28px; font-family: var(--mono); font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 640px) {
+  nav { padding: 14px 20px; }
+  .desc-grid { grid-template-columns: 1fr; }
+  #lightbox-prev { left: 8px; }
+  #lightbox-next { right: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close">✕ cerrar</span>
+  <span id="lightbox-prev">‹</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="lightbox-next">›</span>
+  <span id="lightbox-counter"></span>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-back">← Volver al portafolio</a>
+  <span class="nav-logo">luis.dev</span>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="project-hero">
+    <span class="project-tag">Proyecto · Unity · VR</span>
+    <h1 class="project-title">Zombie<br><em>Shooter</em> VR</h1>
+    <p class="project-subtitle">
+      Videojuego de realidad virtual desarrollado para Meta Quest 3S.
+      Sistema de combate, múltiples enemigos con IA y mecánicas de granadas,
+      construido completamente en Unity con C#.
+    </p>
+    <div class="meta-row">
+      <span class="meta-badge highlight">Unity · C#</span>
+      <span class="meta-badge">Meta Quest 3S</span>
+      <span class="meta-badge">XR Interaction Toolkit</span>
+      <span class="meta-badge">NavMesh AI</span>
+      <span class="meta-badge">2025</span>
+    </div>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-section reveal">
+    <p class="video-label">Demo en gameplay</p>
+    <div class="video-wrapper">
+      <!-- <iframe
+        src="https://www.youtube.com/embed/AQUI_VA_TU_ID_DE_YOUTUBE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe> -->
+      <div class="video-placeholder">
+        <div class="play-btn">▶</div>
+        <span>Reemplaza esto con tu iframe de YouTube</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENSHOTS -->
+  <div class="screenshots-section reveal">
+    <p class="section-label">Capturas del juego</p>
+    <div class="screenshots-grid">
+      <div class="screenshot" onclick="openLightbox(0)">
+        <img src="imgZombies/foto1.jpeg" alt="Gameplay zombie shooter">
+      </div>
+      <div class="screenshot" onclick="openLightbox(1)">
+        <img src="imgZombies/foto2.jpeg" alt="Enemigos VR">
+      </div>
+      <div class="screenshot" onclick="openLightbox(2)">
+        <img src="imgZombies/foto3.jpeg" alt="Sistema de rondas">
+      </div>
+    </div>
+  </div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="description-section reveal">
+    <div class="desc-grid">
+      <div class="desc-block">
+        <h3>Sobre el juego</h3>
+        <p>
+          Zombie Shooter VR es un juego de supervivencia en primera persona diseñado
+          para Meta Quest 3S. El jugador debe eliminar oleadas de enemigos usando
+          armas y granadas dentro de un entorno 3D totalmente inmersivo.
+        </p>
+        <br>
+        <p>
+          Fue desarrollado como proyecto personal para explorar las capacidades
+          de Unity XR y el desarrollo de videojuegos en realidad virtual con
+          interacción física mediante los controles del Quest.
+        </p>
+      </div>
+      <div class="desc-block">
+        <h3>Características</h3>
+        <ul>
+          <li>Múltiples tipos de enemigos con IA (zombies, arañas)</li>
+          <li>Sistema de rondas con dificultad progresiva</li>
+          <li>Física de granadas con explosión en cadena</li>
+          <li>Navegación de enemigos con NavMesh</li>
+          <li>Interacción VR con XR Interaction Toolkit</li>
+          <li>Build optimizado para Android (Meta Quest 3S)</li>
+          <li>Sistema de slots para equipamiento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- STACK -->
+  <div class="stack-section reveal">
+    <p class="section-label">Tecnologías usadas</p>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <div class="stack-tech">Unity</div>
+        <div class="stack-desc">Motor principal del juego</div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-tech">C#</div>
+        <div class="stack-desc">Toda la lógica del juego</div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-tech">XR Toolkit</div>
+        <div class="stack-desc">Interacción VR y controles</div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-tech">NavMesh</div>
+        <div class="stack-desc">Pathfinding de enemigos</div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-tech">Meta Quest 3S</div>
+        <div class="stack-desc">Plataforma objetivo</div>
+      </div>
+      <div class="stack-card">
+        <div class="stack-tech">Android SDK</div>
+        <div class="stack-desc">Build y deploy al headset</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section reveal">
+    <h2>¿Te interesa este proyecto?</h2>
+    <p>Puedo explicar cualquier parte del desarrollo o mostrar el juego en persona.</p>
+    <div class="cta-btns">
+      <a href="mailto:luis_alonso_c25@hotmail.com" class="btn btn-primary">Contáctame</a>
+      <a href="index.html" class="btn btn-ghost">← Ver todos los proyectos</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Luis Angel Alonso Costilla · San Luis Potosí, México</p>
+</footer>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Lightbox
+const images = [
+  { src: 'imgZombies/foto1.jpeg', alt: 'Gameplay zombie shooter' },
+  { src: 'imgZombies/foto2.jpeg', alt: 'Enemigos VR' },
+  { src: 'imgZombies/foto3.jpeg', alt: 'Sistema de rondas' },
+];
+
+let current = 0;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+const lbCounter = document.getElementById('lightbox-counter');
+
+function openLightbox(index) {
+  current = index;
+  updateLightbox();
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lb.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function updateLightbox() {
+  lbImg.src = images[current].src;
+  lbImg.alt = images[current].alt;
+  lbCounter.textContent = (current + 1) + ' / ' + images.length;
+}
+
+document.getElementById('lightbox-close').onclick = closeLightbox;
+document.getElementById('lightbox-prev').onclick = () => { current = (current - 1 + images.length) % images.length; updateLightbox(); };
+document.getElementById('lightbox-next').onclick = () => { current = (current + 1) % images.length; updateLightbox(); };
+
+// Cerrar al hacer clic en el fondo
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+
+// Cerrar con Escape, navegar con flechas del teclado
+document.addEventListener('keydown', (e) => {
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') { current = (current - 1 + images.length) % images.length; updateLightbox(); }
+  if (e.key === 'ArrowRight') { current = (current + 1) % images.length; updateLightbox(); }
+});
+</script>
+
+</body>
+</html>  transition: color 0.2s;
 }
 .nav-back:hover { color: var(--accent); }
 .nav-logo {
