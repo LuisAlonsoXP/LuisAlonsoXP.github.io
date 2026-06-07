@@ -1,1 +1,0 @@
-console.log("JavaScript: Hola mundo dede estoy en un archivo externo de JavaScript...");
